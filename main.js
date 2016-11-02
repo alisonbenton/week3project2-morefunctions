@@ -191,14 +191,32 @@ document.getElementById("HowManyBs").addEventListener("click", function(){
 // 10. Write a function called countChars() that behaves like countBs(), except it takes a
 //     second argument that indicates what character is to be counted.
 
+function countChars(string,char){
+  var total = 0;
+  for (i = 0; i <string.length; i++){
+    if (string.charAt(i) === char){
+      total += 1;
+    };
+  };
+  document.getElementById("q10").innerHTML = "There are " + total + " of that character in your string.";
+};
 
+document.getElementById("HowManyChars").addEventListener("click", function(){
+  countChars(inputstuff.value,inputchar2.value);
+});
 
 
 
 
 // 11. Declare a function called ohZero that replaces all of the o's in a string with 0's.
 
-
+// function ohZero (string){
+  // for (i = 0; i < string.length; i++) {
+    // if (string.charAt[i] === "o") {
+      // string.prototype.replace(/o/g,"0"); //g stands for global, as in replace all of the "o"s
+    // }
+  // }
+// };
 
 
 
